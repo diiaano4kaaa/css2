@@ -1,0 +1,103 @@
+<div>
+
+
+    <div><strong>{{name}}</strong></div>
+    <br>
+    <div><b>{{description}}</b></div>
+    <div><em>{{price}}</em></div>
+    <div>{{category}}</div>
+    <br>
+    <div>
+        {{#with features}}
+        <div> <b>processor</b>
+            {{#with processor}}
+            <div><strong>{{brand}}</strong></div>
+            <div><b>{{model}}</b></div>
+            <div>{{speed}}</div>
+            <div>{{cores}}</div>
+            <div>{{cache}}</div>
+            {{/with}}
+        </div>
+        <br>
+        <div> <b>memory</b>
+            {{#with memory}}
+            <div>{{type}}</div>
+            <div>{{size}}</div>
+            <div>{{speed}}</div>
+            {{/with}}
+        </div>
+        <br>
+        <div>
+            <b>storage</b>
+            {{#with storage}}
+            <div>
+                {{type}}
+            </div>
+            <div>
+                {{size}}
+            </div>
+            {{/with}}
+        </div>
+        <br>
+        <div><b>display</b>
+            {{#with display}}
+            <div>{{size}}</div>
+            <div>{{resolution}}</div>
+            <div>{{technology}}</div>
+            <div>{{color_space}}</div>
+            <div>{{brightness}}</div>
+            <div>{{refresh_rate}}</div>
+            {{/with}}
+        </div>
+        <div>
+            <b>graphics</b>
+            {{#with graphics}}
+            <div>{{brand}}</div>
+            <div>{{model}}</div>
+            <div>{{memory}}</div>
+            {{/with}}
+        </div>
+        <br>
+        <div><b>ports</b>
+            {{#each ports}}
+            <div>{{type}}</div>
+            <div>{{count}}</div>
+            <div>
+                {{#each features}}
+                {{this}}
+                {{/each}}
+            </div>
+            <div>{{type}}</div>
+            <div>{{count}}</div>
+            {{/each}}
+        </div>
+        <br> --}}
+        <div><b>battery</b>
+            {{#with battery}}
+            <div>{{type}}</div>
+            <div>{{capacity}}</div>
+            <div>{{life}}</div>
+            {{/with}}
+        </div>
+        <br>
+        <div>{{weight}} </div>
+        <div>{{#with dimensions}}
+            <div>{{height}}</div>
+            <div>{{width}}</div>
+            <div>{{depth}}</div>
+            {{/with}}
+        </div>
+        <br>
+        <div>
+            {{operating_system}}
+        </div>
+        <div>
+            {{#each accessories}}
+            <div>{{name}}</div>
+            <div>{{price}}</div>
+            <br>
+            {{/each}}
+        </div>
+        {{/with}}
+    </div>
+</div>
