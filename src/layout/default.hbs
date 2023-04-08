@@ -19,34 +19,31 @@
 </head>
 
 
-<body>
+<body class="p-4">
   <header>
     {{#with header}}
-    <div>
+    <div class="mb-2">
       <h1>{{name.firstname}} {{name.lastname}}</h1>
     </div>
-    <div>
+    <div class="mb-2">
       <b>{{position}}</b>
     </div>
-    <br>
-    <div>
+
+    <div class="mb-2">
       <em>
         {{salary}}
       </em>
     </div>
-    <br>
     <hr>
-    <div>
+    <div class="mb-2">
       <em>{{address}}</em>
     </div>
     {{/with}}
-    <br>
     <hr>
   </header>
-
-  {{> nav}}
-
-
+  <div class="mb-5">
+    {{> nav}}
+  </div>
   {{{body}}}
   {{!-- file from conteiner --}}
 
