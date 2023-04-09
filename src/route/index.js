@@ -1736,5 +1736,23 @@ router.get('/shophome', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+router.get('/list', function (req, res) {
+  res.render('list', {
+    layout: 'basic',
+    list: [
+      { name: 'First Button' },
+      { name: 'Secondary Button' },
+      { name: 'Error Button' },
+      { name: 'Submit Button' },
+    ],
+    user: {
+      name: 'di',
+      role: 'admin',
+      isConfirm: true,
+      age: 20,
+    },
+  })
+})
 // Підключаємо роутер до бек-енду
 module.exports = router
