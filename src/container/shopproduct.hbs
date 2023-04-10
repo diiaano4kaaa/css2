@@ -1,0 +1,96 @@
+<div class="row col-12 m-2">
+    <header class="row">
+        <div class="col-5 ms-4">
+            <ol class="breadcrumb">
+                {{#each breadcrumb}}
+                <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                {{/each}}
+            </ol>
+        </div>
+    </header>
+
+    <body>
+        <div class="row">
+            <div class="col-6">
+                {{#with productData}}
+                <div class="m-3">
+                    <img src="{{img}}">
+                </div>
+                <div class="card m-3">
+                    {{#with info}}
+                    <div class="card-body">
+                        <div>{{title}}</div>
+                        <p>{{about}}</p>
+                        <h4><b>{{price}}</b></h4>
+                        {{#each category}}
+                        <div>{{#if isHot}}<span
+                                class="badge rounded-pill text-bg-warning text-light">{{name}}</span>{{/if}}
+                            {{#if isNew}}<span
+                                class="badge rounded-pill text-bg-primary text-light">{{name}}</span>{{/if}}
+                            {{#if isBonus}} <span
+                                class="badge rounded-pill text-bg-info text-light">{{name}}</span>{{/if}}
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/with}}
+                    {{!-- info --}}
+                </div>
+            </div>
+
+            <div class="col-5 m-1">
+                <div class=" table m-3">
+                    {{#with item}}
+                    <table class="table table-boarder">
+                        <thead>
+                            <tr>
+                                {{#each head}}
+                                <th>{{this}}</th>
+                                {{/each}}
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each body}}
+                            <tr>
+                                <td>
+                                    {{this}}
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                    {{/with}}
+                    {{!-- item --}}
+                </div>
+
+                <div class="card ms-3">
+                    {{#with param}}
+                    <div class="card-header">
+                        {{title}}
+                    </div>
+                    <div class="card-body">{{list}}</div>
+                    {{/with}}
+                </div>
+
+                <div class="alert alert-danger mt-2 ms-3">
+                    {{#with alert}}
+                    <div>{{text}}</div>
+                    {{/with}}
+                </div>
+                {{/with}}
+                {{!-- productData --}}
+            </div>
+        </div>
+        <hr>
+        <div class="ms-4 col-12">
+            {{#with goodsOtherBlock}}
+            <h4 class="text-center col-10"><b>{{title}}</b></h4>
+            {{> shopcard}}
+            {{/with}}
+        </div>
+    </body>
+    <footer>
+        <hr>
+        {{> shopaction}}
+    </footer>
+</div>
