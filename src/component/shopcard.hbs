@@ -1,0 +1,14 @@
+<div class="row mb-3">
+    {{#each cards}}
+    <div class="card col-3 m-2">
+        <img class="card-img-top pt-2" src="{{image}}">
+        <div class="card-body">
+            <div calss="card-title"> {{title}}
+                {{#if isHot}} <span class="badge text-bg-warning text-uppercase rounded-pill">Hot!</span> {{/if}}
+                {{#if isNew}} <span class="badge text-bg-primary rounded-pill">Нове</span> {{/if}}
+            </div>
+            <div>{{description}}</div>
+        </div>
+    </div>
+    {{/each}}
+</div>
