@@ -1,0 +1,97 @@
+<main>
+    <div class="row m-3">
+        <div class="col-6 m-3">
+            {{#with header}}
+            <h3>{{title}}</h3>
+            {{#with button}}
+            <a class="btn btn-outline-secondary" href="{{link}}">{{text}}</a>
+            {{/with}}
+            {{!-- button --}}
+            {{/with}}
+            {{!-- header --}}
+        </div>
+        <hr>
+    </div>
+    <div class="row m-3">
+        {{#each goodsBlock}}
+        <div class="card m-3 row">
+            <div> <img class="card-img m-2 col-2" src={{image}} style="max-width: 100px;"></div>
+            <div class="card-body">
+                <h6 class="card-title ">{{name}}</h6>
+                <div class="card-text text-secondary">{{description}}</div>
+                {{#with price}}
+                <div class="">{{title}} {{value}}</div>
+                {{/with}}
+                {{!-- price --}}
+                <p>{{amount}}</p>
+                {{#each buttons}}
+                <div class="col-4 m-2">
+                    {{#if isPrimary}}<button class="btn btn-primary">{{text}}</button> {{/if}}
+                    {{#if isDanger}} <button class="btn btn-outline-danger">{{text}}</button> {{/if}}
+                </div>
+                {{/each}}
+                {{!-- buttons --}}
+            </div>
+        </div>
+        {{/each}}
+        {{!-- goodsBlock --}}
+        <hr>
+    </div>
+    <div class="row m-3">
+        {{#with total}}
+        <div class="col-8 mb-4">
+            <h3>{{title}}</h3>
+            <b class="display-4">{{amount}}</b>
+            <p class="text-secondary">{{delivery}}</p>
+            {{#each buttons}}
+            <div class="pt-2">
+                {{#if isSuccess}}<button class="btn btn-success" href={{link}}>{{text}}</button>{{/if}}
+                {{#if isOutline}}<button class="btn btn-outline-success" href="{{link}}">{{text}} </button> {{/if}}
+                {{/each}}
+                {{!-- buttons --}}
+            </div>
+        </div>
+        {{/with}}
+        {{!-- total --}}
+        <hr>
+    </div>
+    {{#with goodsOtherBlock}}
+    <div class="row">
+        <h5>{{title}}</h5>
+        {{#each cards}}
+        <div class="card m-1 col-4">
+            <img class="card-img mt-2" src={{image}}>
+            <div class="card-body">
+                <div class="card-title">{{title}}
+                    {{#if isHot}}<badge class="badge rounded-pill text-bg-warning">Hot</badge> {{/if}}
+                    {{#if idNew}}<badge class="badge rounded-pill text-bg-primary"></badge>{{/if}}
+                </div>
+                <div>{{description}}</div>
+            </div>
+        </div>
+        {{/each}}
+        <hr class="mt-4 mb-4">
+    </div>
+    {{/with}}
+    {{#with subscribe}}
+    <div class="card bg-secondary">
+        <h2 class="mt-3">{{header}}</h2>
+        <p class="card-text">{{description}}</p>
+        {{#each buttons}}
+        <div class="col-6 mt-2 mb-3">
+            <button class="btn btn-primary" href={{link}}>{{text}}</button>
+            {{/each}}
+        </div>
+    </div>
+    {{/with}}
+
+
+
+
+
+
+
+
+
+
+</main>
