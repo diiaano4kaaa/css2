@@ -12,31 +12,10 @@
         </div>
         <hr>
     </div>
-    <div class="row m-3">
-        {{#each goodsBlock}}
-        <div class="card m-3 row">
-            <div> <img class="card-img m-2 col-2" src={{image}} style="max-width: 100px;"></div>
-            <div class="card-body">
-                <h6 class="card-title ">{{name}}</h6>
-                <div class="card-text text-secondary">{{description}}</div>
-                {{#with price}}
-                <div class="">{{title}} {{value}}</div>
-                {{/with}}
-                {{!-- price --}}
-                <p>{{amount}}</p>
-                {{#each buttons}}
-                <div class="col-4 m-2">
-                    {{#if isPrimary}}<button class="btn btn-primary">{{text}}</button> {{/if}}
-                    {{#if isDanger}} <button class="btn btn-outline-danger">{{text}}</button> {{/if}}
-                </div>
-                {{/each}}
-                {{!-- buttons --}}
-            </div>
-        </div>
-        {{/each}}
-        {{!-- goodsBlock --}}
-        <hr>
-    </div>
+
+    {{> cartGoodsItem}}
+
+
     <div class="row m-3">
         {{#with total}}
         <div class="col-8 mb-4">
