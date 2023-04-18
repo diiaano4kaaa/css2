@@ -37,27 +37,7 @@
     {{/with}}
     {{!-- actionBlock --}}
     {{#each itemList}}
-    <div class="row">
-        <div class="col-3">
-            <p class="text-secondary mb-0">{{number}}</p>
-            <p>{{status}} </p>
-        </div>
-        <div class="col-2">
-            <p class="text-secondary mb-0">{{amount.title}}</p>
-            <p> {{amount.value}}
-            </p>
-        </div>
-        <div class="col-3 m-1">
-            <img src="{{images}}" style="width:50px; height:50px;">
-        </div>
-        <div class="col-1">
-            {{#with button}}
-            {{#if isPrimary}}
-            <a class="btn btn-primary" href="{{link}}">{{text}}</a>{{/if}}
-            {{/with}}
-        </div>
-        <hr>
-    </div>
+    {{> purchaseItem}}
     {{/each}}
     {{!-- itemList --}}
     {{/with}}
@@ -117,25 +97,23 @@
 
             <div class="card m-3">
                 <div class="card-body row">
+                    <div class=" ">
+                        {{#each buttons}}
 
-                    {{#each buttons}}
-                    <div class="col-4">
                         {{#if isPrimary}}
                         <button class="btn btn-primary" href="{{link}}">{{text}}</button>
                         {{/if}}
-                    </div>
-                    <div class="col-4">
+
                         {{#if isSecondary}}
                         <button class="btn btn-outline-secondary" href="{{link}}">{{text}}</button>
                         {{/if}}
-                    </div>
-                    <div class="col-4">
+
                         {{#if isDanger}}
                         <button class="btn btn-outline-danger" href="{{link}}">{{text}}</button>
                         {{/if}}
-                    </div>
-                    {{/each}}
 
+                        {{/each}}
+                    </div>
                 </div>
 
             </div>
@@ -146,7 +124,7 @@
             <h4 class="card-title m-2">{{title}}</h4>
             <div class="row">
                 {{#each users}}
-                <div class="card col-4 m-1 p-1">
+                <div class="card col-4 m-3 p-1 ">
                     {{!-- <div class="card-body "> --}}
                         <b>{{name}}</b>
                         <p class="text-secondary mt-0 mb-1">{{phone}}</p>
