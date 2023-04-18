@@ -141,22 +141,25 @@
             </div>
         </div>
 
-        <div class="card mt-3">
+        <div class="card p-2 my-2">
             {{#with recipients}}
             <h4 class="card-title m-2">{{title}}</h4>
-            {{#each users}}
-            <div class="card col-3 m-3 row">
-                <div class="card-body ">
-                    <b>{{name}}</b>
-                    <p class="text-secondary mt-0 mb-1">{{phone}}</p>
-                    {{#with button}}
-                    <button class="btn btn-primary " href="{{link}}">{{text}}</button>
-                    {{/with}}
-                </div>
+            <div class="row">
+                {{#each users}}
+                <div class="card col-4 m-1 p-1">
+                    {{!-- <div class="card-body "> --}}
+                        <b>{{name}}</b>
+                        <p class="text-secondary mt-0 mb-1">{{phone}}</p>
 
+                        <button class="btn btn-primary " href="{{button.link}}">{{button.text}}</button>
+
+                        {{!--
+                    </div> --}}
+
+                </div>
+                {{/each}}
+                {{!-- users --}}
             </div>
-            {{/each}}
-            {{!-- users --}}
             {{/with }}
             {{!-- recipients --}}
         </div>
