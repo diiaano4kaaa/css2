@@ -97,23 +97,14 @@
 
             <div class="card m-3">
                 <div class="card-body row">
-                    <div class=" ">
-                        {{#each buttons}}
-
-                        {{#if isPrimary}}
-                        <button class="btn btn-primary" href="{{link}}">{{text}}</button>
-                        {{/if}}
-
-                        {{#if isSecondary}}
-                        <button class="btn btn-outline-secondary" href="{{link}}">{{text}}</button>
-                        {{/if}}
-
-                        {{#if isDanger}}
-                        <button class="btn btn-outline-danger" href="{{link}}">{{text}}</button>
-                        {{/if}}
-
-                        {{/each}}
+                    {{#each buttons}}
+                    <div class=" col-4">
+                        <a class="btn {{#if isPrimary}} btn-primary {{/if}} 
+                        {{#if isSecondary}} btn-outline-secondary {{/if}} 
+                        {{#if isDanger}} btn-outline-danger {{/if}}" href="{{link}}">{{text}}</a>
                     </div>
+                    {{/each}}
+
                 </div>
 
             </div>
