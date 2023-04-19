@@ -7,16 +7,20 @@
             <div class="card-text text-secondary">{{description}}</div>
         </div>
         {{#with price}}
-        <div class="col-1">{{title}} {{value}}</div>
+        <div class="col-1">
+            <p>{{title}}</p>
+            <p>{{value}}</p>
+        </div>
         {{/with}}
         {{!-- price --}}
         <p class="col-1">{{amount}}</p>
-        {{#each buttons}}
-        <div class="col-3 m-0">
-            {{#if isPrimary}}<button class="btn btn-primary">{{text}}</button> {{/if}}
-            {{#if isDanger}} <button class="btn btn-outline-danger">{{text}}</button> {{/if}}
+
+        <div class="col-3 p-2">
+            {{#each buttons}}
+            <button class="btn {{#if isPrimary}} btn-primary{{/if}} {{#if isDanger}} btn-outline-danger mt-2{{/if}}"
+                href="#">{{text}}</button> {{/each}}
         </div>
-        {{/each}}
+
         {{!-- buttons --}}
     </div>
 </div>
