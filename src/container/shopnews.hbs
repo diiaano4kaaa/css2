@@ -1,0 +1,35 @@
+<div class=" row col-12 m-3">
+    {{> breadcrumb}}
+    </header>
+
+    <body>
+        <div class="row m-3 col-12">
+            {{#with newsData}}
+            <img src="{{photo}}" class="col-11 m-4 p-2">
+            <div>
+                {{#with head}}
+                <h2> <b>{{heading}}</b></h2>
+                <p>{{description}}</p>
+                {{/with}}
+            </div>
+            <div class="">
+                {{#each body}}
+                <h4><b>{{title}}</b></h4>
+                <p>{{text}}</p>
+                {{/each}}
+            </div>
+        </div>
+        {{/with}}
+        <hr>
+        {{> shoppost}}
+        <hr>
+        {{> shopaction}}
+    </body>
+
+    <hr>
+
+
+
+
+
+</div>
