@@ -2545,9 +2545,6 @@ router.get('/shoporder', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -3739,6 +3736,12 @@ router.get('/shopcatalog', function (req, res) {
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
+})
+
+router.get('/cssStyle', function (req, res) {
+  res.render('cssStyle', {
+    layout: 'cssStyle',
+  })
 })
 // Підключаємо роутер до бек-енду
 module.exports = router
