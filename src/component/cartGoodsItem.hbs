@@ -1,25 +1,28 @@
-<div class="row m-3">
-    {{#each goodsBlock}}
-    <div class="card m-3 row">
-        <div> <img class="card-img m-2 me-0 col-2" src={{image}} style="max-width: 100px;"></div>
-        <div class="card-body">
-            <h6 class="card-title ">{{name}}</h6>
-            <div class="card-text text-secondary пше">{{description}}</div>
-            {{#with price}}
-            <div class="">{{title}} {{value}}</div>
-            {{/with}}
-            {{!-- price --}}
-            <p>{{amount}}</p>
-            {{#each buttons}}
-            <div class="col-4 m-2">
-                {{#if isPrimary}}<button class="btn btn-primary">{{text}}</button> {{/if}}
-                {{#if isDanger}} <button class="btn btn-outline-danger">{{text}}</button> {{/if}}
-            </div>
-            {{/each}}
-            {{!-- buttons --}}
+{{#each goodsBlock}}
+<div class="card m-3">
+    <div class="row m-2">
+        <div class="col-2"> <img class="card-img" src={{image}} style="max-width: 100px;"></div>
+        <div class="col-4">
+            <h6 class="card-title">{{name}}</h6>
+            <div class="card-text text-secondary">{{description}}</div>
         </div>
+        {{#with price}}
+        <div class="col-1">
+            <p>{{title}}</p>
+            <p>{{value}}</p>
+        </div>
+        {{/with}}
+        {{!-- price --}}
+        <p class="col-1">{{amount}}</p>
+
+        <div class="col-3 p-2">
+            {{#each buttons}}
+            <button class="btn {{#if isPrimary}} btn-primary{{/if}} {{#if isDanger}} btn-outline-danger mt-2{{/if}}"
+                href="#">{{text}}</button> {{/each}}
+        </div>
+
+        {{!-- buttons --}}
     </div>
-    {{/each}}
-    {{!-- goodsBlock --}}
-    <hr>
 </div>
+{{/each}}
+{{!-- goodsBlock --}}
