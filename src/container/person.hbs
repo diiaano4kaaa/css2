@@ -1,9 +1,8 @@
 <div>
     {{#with person}}
-
-    <div>{{name}} </div>
-    <div> {{age}},</div>
-    <div>{{gender}}</div>
+    <h2><b> {{name}} </b></h2>
+    <div> <b>Age:</b> {{age}}</div>
+    <div><b>Gender:</b> {{gender}}</div>
     <hr>
     <div>
         {{> title data='My address' big=false}}
@@ -13,19 +12,19 @@
         {{/with}}
     </div>
     <hr>
-    <div>
-        <ul>
+    <div class="row mx-1">
+        <ul class="list-group col-6">
             {{> title data='My education' big=false}}
-            <li> {{#each education}}
+            <li class="list-group-item"> {{#each education}}
                 <div>Degree: {{degree}}</div>
             </li>
-            <li>
+            <li class="list-group-item">
                 <div>Major: {{major}}</div>
             </li>
-            <li>
+            <li class="list-group-item">
                 <div>University: {{university}}</div>
             </li>
-            <li>
+            <li class="list-group-item">
                 <div>Graduation year: {{graduationYear}}</div>
             </li>
             {{/each}}
@@ -37,8 +36,8 @@
         <strong>{{company}}</strong>
         <div>{{title}}</div>
         <div>from {{startDate}} to {{endDate}}</div>
-        <br>
-        <div><b>My responsibilities:</b> {{responsibilities}}</div>
+
+        <div class="mt-3"><b>My responsibilities:</b> {{responsibilities}}</div>
         <div><b>Founded year:</b> {{year_founded}}</div>
         <div><b>Industry:</b> {{industry}}</div>
         {{#each employees}}
@@ -46,15 +45,15 @@
             <div><b>Працівники:</b></div>
             <li>{{name}}</li>
             <ul>
-                <li>
+                <li class="my-2">
                     Position: {{position}}
                 </li>
-                <li>
+                <li class="my-2">
                     Department: {{department}}
                 </li>
-                <br>
-                <b> Projects:</b>
-                <div>
+
+                <b class="my-3"> Projects:</b>
+                <div class="mb-3">
                     {{#each projects}}
                     {{name}} <br>
                     {{description}}
@@ -62,8 +61,8 @@
 
                 </div>
 
-                <br>
-                <div>
+
+                <div class="my-3">
                     <b>Teams:</b>
                     {{#each teams}}
                     <div>Назва: <em> {{team_name}}</em></div>
@@ -71,24 +70,24 @@
                     <div>title: {{team_leader.title}}</div>
                     <div>email: {{team_leader.email}}</div>
                 </div>
-                <br>
-                <div>
+
+                <div class="mt-3">
                     {{#each team_members}}
                     <div><b>Team members:</b></div>
                     <div>Name: {{name}}</div>
                     <div>Title: {{title}}</div>
                     <div>Email: {{email}}</div>
                     <div>Skills: {{skills}}</div>
-                    <br>
+
                     {{#each projects}}
-                    <div><b>Projects</b></div>
+                    <div class="mt-3"><b>Projects</b></div>
                     <div>Name: {{name}}</div>
                     <div>Description: {{description}}</div>
                     <div>Technologies: {{technologies}}</div>
-                    <br>
+
                     {{#each team_members}}
-                    <div>Name: {{name}}</div>
-                    <div>Title: {{title}}</div>
+                    <div class="mb-3">Name: {{name}}</div>
+                    <div class="mt-0">Title: {{title}}</div>
                     {{/each}}
                     {{/each}}
                     {{/each}}
@@ -100,7 +99,7 @@
         {{/each}}
         {{/each}}
     </div>
-    <hr>
-    <br>
+
+
     {{/with}}
 </div>

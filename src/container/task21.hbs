@@ -1,17 +1,16 @@
 <div>
     {{#with heading}}
-    <div class="card">
+    <div class="card my-4">
         <div class="card-body">
             {{#with main}}
             <h1>{{title}}</h1>
             <p>{{text}}</p>
             {{#with button_text}}
             <div>
-                <button class="btn btn-primary">
+                <button class="btn btn-primary mb-2">
                     {{solid}}
                 </button>
             </div>
-            <br>
             <div>
                 <button class="btn btn-outline-primary">
                     {{outline}}
@@ -21,19 +20,18 @@
             {{/with}}
         </div>
     </div>
-    <br>
-    <div class="card">
+
+    <div class="card mb-4">
         <div class="card-body">
             {{#with second}}
             <h2>{{title}}</h2>
             <p>{{text}}</p>
             {{#with button_text}}
             <div>
-                <button class="btn btn-secondary">
+                <button class="btn btn-secondary mb-2">
                     {{solid}}
                 </button>
             </div>
-            <br>
             <div><button class="btn btn-outline-secondary">
                     {{outline}}
                 </button></div>
@@ -42,19 +40,19 @@
             {{!-- second --}}
         </div>
     </div>
-    <br>
-    <div class="card">
+
+    <div class="card mb-4">
         <div class="card-body">
             {{#with subblock}}
             <h3>{{title}}</h3>
             <p>{{text}}</p>
             {{#with button_text}}
             <div>
-                <button class="btn btn-dark">
+                <button class="btn btn-dark mb-2">
                     {{solid}}
                 </button>
             </div>
-            <br>
+
             <div>
                 <button class="btn btn-outline-dark">
                     {{outline}}
@@ -68,14 +66,13 @@
     </div>
     {{/with}}
     {{!-- heading --}}
-    <br><br>
+
     {{#with nested_display}}
-    <div class="card">
+    <div class="card mb-4">
         <div class="card-body">
             <div class="display-1">{{title}}</div>
-
             {{#with children_display}}
-            <div class="card">
+            <div class="card my-3">
                 <div class="card-body">
                     <div class="display-4">{{title}}</div>
                     <p>{{text}}</p>
@@ -88,7 +85,7 @@
 
             </div>
             {{/with}}
-            <br>
+
             {{!-- children_display --}}
             <h6>{{header_text}}</h6>
             <div>
@@ -100,8 +97,8 @@
     </div>
     {{/with}}
     {{!-- nested_display --}}
-    <br>
-    <div class="card">
+
+    <div class="card mb-3">
         {{#with paragraph}}
         <div class="card-body">
             <p class="text-uppercase">{{title}}</p>
@@ -113,9 +110,9 @@
                     {{text}}
                 </a>
                 {{/with}}
-                <br>
+
             </div>
-            <div class="card">
+            <div class="card mb-2">
                 <div class="card-body">
                     <ul>
                         {{#each list_name}}

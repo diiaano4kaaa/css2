@@ -1,14 +1,10 @@
 <main class="m-4">
-
-
-
-    <div class="row col-12">
+    <div class="row ">
         {{#with newsBlock}}
         <h3 class="text-center">{{title}}</h3>
         {{#each cards}}
         <div class="card col-3 m-1 text-bg-secondary text-center">
             <div class="card-body">
-
                 <div class="card-title">{{title}}
                     {{#if isNew}} <span class="badge rounded-pill text-bg-success">New</span>{{/if}}
                     {{#if isTop}} <span class="badge rounded-pill text-bg-warning">Top</span>{{/if}}
@@ -21,21 +17,19 @@
         {{!-- newsBlock --}}
     </div>
     <hr>
-
     {{#with goodsBlock}}
     <div class="row">
-        <div class=" card col-12">
-            <div class="nav nav-tabs">
-                {{#each tabs}}
-                <div class="nav-item">
-                    {{#if isActive}} <a class="nav-link active" href="#">{{text}}</a>
-                    {{else}}
-                    <a class="nav-link {{#if isDisabled}} disabled {{/if}}" href="#">{{text}}</a>{{/if}}
-                </div>
-                {{/each}}
+        <div class="nav nav-tabs ms-2">
+            {{#each tabs}}
+            <div class="nav-item">
+                {{#if isActive}} <a class="nav-link active" href="#">{{text}}</a>
+                {{else}}
+                <a class="nav-link {{#if isDisabled}} disabled {{/if}}" href="#">{{text}}</a>{{/if}}
             </div>
+            {{/each}}
         </div>
     </div>
+
     {{> shopcard}}
 
     {{/with}}
@@ -48,7 +42,6 @@
                 <div>
                     <h2>{{header}}</h2>
                     <p>{{description}}</p>
-
                     {{#each buttons}}
                     <button class="btn btn-primary m-1 text-end">{{text}}</button>
                     {{/each}}
@@ -60,7 +53,7 @@
     </div>
     <hr>
     {{> shopaction }}
-    <hr>
+
 
 
 

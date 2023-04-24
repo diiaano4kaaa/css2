@@ -17,7 +17,8 @@
 
         <div class="col-3 p-2">
             {{#each buttons}}
-            <button class="btn {{#if isPrimary}} btn-primary{{/if}} {{#if isDanger}} btn-outline-danger mt-2{{/if}}"
+            <button
+                class="btn {{#if isPrimary}} btn-primary mt-2{{/if}} {{#if isDanger}} btn-outline-danger mt-2{{/if}}"
                 href="#">{{text}}</button> {{/each}}
         </div>
 

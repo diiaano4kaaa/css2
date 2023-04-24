@@ -1,53 +1,80 @@
 <div>
-
-    <div><strong>{{name}}</strong></div>
+    <strong class="display-4 mb-3">{{name}}</strong>
     <div>
-        {{#each users}}
-        <div> id: {{id}}</div>
-        <div><strong>{{name}}</strong></div>
-        <div>{{gender}}</div>
-        <div> age {{age}}</div>
-        <br>
-        <div><b>
-                friends
-            </b>{{#each friends}}
-            <div>id: {{id}}</div>
-            <div><strong>{{name}}</strong></div>
-            <div>{{gender}}</div>
-            <div>age {{age}}</div>
-            <br>
-            <div><b>mutual friends</b>
-                {{#each mutual_friends}}
-                <div>id: {{id}}</div>
-                <div><strong>{{name}}</strong></div>
-                <div>{{gender}}</div>
-                <div>age {{age}}</div>
-                {{/each}}
+        <div class="card col-7">
+            <b class="text-uppercase m-3">Friends</b>
+            <div class="card mx-3 mt-2 col-7">
+                <div class="card-body">
+                    {{#each users}}
+                    <div> {{id}}
+                        <strong>{{name}}</strong>
+                        <span class="badge pounded-pill text-bg-warning">{{gender}}</span>
+                        <em class="text-end"> age {{age}}</em>
+                    </div>
+                </div>
+            </div>
+            <div class="card col-7 mx-3 my-3">
+                <div class="card-body ">
+                    {{#each friends}}
+                    <div>{{id}}
+                        <strong>{{name}}</strong>
+                        <span class="badge rounded-pill text-bg-success ">{{gender}}</span>
+                        <em>age {{age}}</em>
+
+                    </div>
+                </div>
+            </div>
+            <b class="text-uppercase ms-3 mb-2">mutual friends</b>
+            <div class="card mx-3 col-7 mb-3">
+                <div class="card-body">
+
+                    {{#each mutual_friends}}
+                    <div>{{id}}
+                        <strong>{{name}}</strong>
+                        <span class="badge rounded-pill text-bg-success ">{{gender}}</span>
+                        <em>age {{age}}</em>
+                    </div>
+                    {{/each}}
+                </div>
             </div>
 
+
+            <b class="text-uppercase ms-3 mb-2">groups</b>
+            <div class="card mx-3 col-7 mb-3">
+                <div class="card-body">
+                    {{#each groups}}
+                    <div>
+
+                        <strong>{{name}}</strong>
+
+                        <div>
+                            <em class="mt-3">{{description}}</em>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <b class="text-uppercase ms-3 mb-2">members</b>
+            <div class="card col-7 mx-4 mb-3">
+                <div class="card-body">
+
+                    {{#each members}}
+                    <div>{{id}}
+                        <div><strong>{{name}}</strong></div>
+                        <span class="badge rounded-pill text-bg-success ">{{gender}}</span>
+                        <em>age {{age}}</em>
+                    </div>
+                    {{/each}}
+                    {{/each}}
+
+                    {{/each}}
+                    {{/each}}
+                </div>
+            </div>
+
+
         </div>
-        <br>
-        <div><b>groups</b>
-            {{#each groups}}
-            <div>id: {{id}}</div>
-            <div><strong>{{name}}</strong></div>
-            <div>{{description}}</div>
-            <br>
-            <div><b>members</b></div>
-            {{#each members}}
-            <div>{{id}}</div>
-            <div><strong>{{name}}</strong></div>
-            <div>{{gender}}</div>
-            <div>age {{age}}</div>
-            {{/each}}
-            {{/each}}
-        </div>
-        {{/each}}
-        {{/each}}
+
     </div>
-
-
-
-
-
+</div>
 </div>

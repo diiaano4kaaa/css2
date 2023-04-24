@@ -4,39 +4,37 @@
     <div><b>Name:</b> {{name}}</div>
     <div><b>Location:</b> {{location.city}}, {{location.country}}</div>
     <div><b>Date:</b> {{date}}</div>
-    <br>
-    <div><strong>Program</strong></div>
+
+    <div class="mt-3"><strong>Program</strong></div>
     {{#each program}}
     <ul>
         <li>
             <div><b>Name:</b> {{name}}</div>
             <div><b>Type:</b> {{type}}</div>
             <div><b>Duration:</b> {{duration}}</div>
-            <br>
-            {{#with details.museum}}
-            <div><b>Details:</b></div>
-            <h3><b>Museum name:</b> {{name}}</h3>
 
-            <div>{{#with location}}
+            {{#with details.museum}}
+            <div class="mt-1"><b>Details</b></div>
+            <h5><b>Museum name:</b> {{name}}</h5>
+
+            <div class="mb-2">{{#with location}}
                 <B>Location:</B>{{address}}, {{city}}, {{country}}
                 {{/with}}
             </div>
-            <br>
-            <hr>
 
             {{#each exhibits}}
-            <div><b>Exhibits:</b> {{name}}</div>
+            <div class="mt-2"><b>Exhibits:</b> {{name}}</div>
             <div><b>Artist:</b> {{#if artist}} {{artist}} {{else}} - {{/if}}</div>
         <li>
             {{name}} (Description: {{description}}) {{#if audio_guide}} {{/if}}
         </li>
-        <br>
+
         {{/each}}
         {{/with}}
 
 
         {{#with guide}}
-        <div><b>Guide:</b> {{name}}</div>
+        <div class="mt-2"><b>Guide:</b> {{name}}</div>
         <div><b>Language:</b> {{language}}</div>
         <div><b>Rating:</b> {{rating}}</div>
         {{/with}}
@@ -48,14 +46,14 @@
         {{/with}}
 
         {{#each performers}}
-        <b>performers</b>
+        <b class="mt-2">performers</b>
         <div><b>name:</b> {{name}}</div>
         <div><b>type:</b> {{type}}</div>
         {{/each}}
         {{/with}}
 
         {{#with guide}}
-        <div><b>Guide:</b> {{name}}</div>
+        <div class="mt-2"><b>Guide:</b> {{name}}</div>
         <div><b>Language:</b> {{language}}</div>
         <div><b>Rating:</b> {{rating}}</div>
         {{/with}}

@@ -1,55 +1,68 @@
-<div>
+<div class="row">
+    <div class="mb-2"><strong>{{name}}</strong></div>
 
-
-    <div><strong>{{name}}</strong></div>
-    <br>
     <div><b>{{description}}</b></div>
     <div><em>{{price}}</em></div>
     <div>{{category}}</div>
-    <br>
+
     <div>
         {{#with features}}
-        <div> <b>processor</b>
-            {{#with processor}}
-            <div><strong>{{brand}}</strong></div>
-            <div><b>{{model}}</b></div>
-            <div>{{speed}}</div>
-            <div>{{cores}}</div>
-            <div>{{cache}}</div>
-            {{/with}}
-        </div>
-        <br>
-        <div> <b>memory</b>
-            {{#with memory}}
-            <div>{{type}}</div>
-            <div>{{size}}</div>
-            <div>{{speed}}</div>
-            {{/with}}
-        </div>
-        <br>
-        <div>
-            <b>storage</b>
-            {{#with storage}}
-            <div>
-                {{type}}
+        <div class="card col-3 my-3">
+            <div class="card-body text-bg-primary">
+                <div>
+                    <div class="card-title"> <b>Processor</b></div>
+                    {{#with processor}}
+                    <div><strong>{{brand}}</strong></div>
+                    <div><b>{{model}}</b></div>
+                    <div>{{speed}}</div>
+                    <div>{{cores}}</div>
+                    <div>{{cache}}</div>
+                    {{/with}}
+                </div>
             </div>
-            <div>
-                {{size}}
+        </div>
+        <div class="card col-3">
+            <div class="card-body text-bg-success">
+                <div>
+                    <div> <b class="card-title">Memory</b></div>
+                    {{#with memory}}
+                    <div>{{type}}</div>
+                    <div>{{size}}</div>
+                    <div>{{speed}}</div>
+                    {{/with}}
+                </div>
             </div>
-            {{/with}}
         </div>
-        <br>
-        <div><b>display</b>
-            {{#with display}}
-            <div>{{size}}</div>
-            <div>{{resolution}}</div>
-            <div>{{technology}}</div>
-            <div>{{color_space}}</div>
-            <div>{{brightness}}</div>
-            <div>{{refresh_rate}}</div>
-            {{/with}}
+
+
+
+        <div class="card col-3 my-3">
+            <div class="card-body text-bg-secondary">
+                <b>storage</b>
+                {{#with storage}}
+                <div>
+                    {{type}}
+                </div>
+                <div>
+                    {{size}}
+                </div>
+                {{/with}}
+            </div>
         </div>
-        <div>
+
+        <div class="card mb-3 col-3">
+            <div class="card-body text-bg-dark"><b>display</b>
+                {{#with display}}
+                <div>{{size}}</div>
+                <div>{{resolution}}</div>
+                <div>{{technology}}</div>
+                <div>{{color_space}}</div>
+                <div>{{brightness}}</div>
+                <div>{{refresh_rate}}</div>
+                {{/with}}
+            </div>
+        </div>
+        <div class="my-3">
             <b>graphics</b>
             {{#with graphics}}
             <div>{{brand}}</div>
@@ -57,8 +70,8 @@
             <div>{{memory}}</div>
             {{/with}}
         </div>
-        <br>
-        <div><b>ports</b>
+
+        <div class="my-3"><b>ports</b>
             {{#each ports}}
             <div>{{type}}</div>
             <div>{{count}}</div>
@@ -71,31 +84,31 @@
             <div>{{count}}</div>
             {{/each}}
         </div>
-        <br> --}}
-        <div><b>battery</b>
+
+        <div class="my-3"><b>battery</b>
             {{#with battery}}
             <div>{{type}}</div>
             <div>{{capacity}}</div>
             <div>{{life}}</div>
             {{/with}}
         </div>
-        <br>
-        <div>{{weight}} </div>
+
+        <div class="my-3">{{weight}} </div>
         <div>{{#with dimensions}}
             <div>{{height}}</div>
             <div>{{width}}</div>
             <div>{{depth}}</div>
             {{/with}}
         </div>
-        <br>
-        <div>
+
+        <div class="my-3">
             {{operating_system}}
         </div>
-        <div>
+        <div class="my-3">
             {{#each accessories}}
             <div>{{name}}</div>
             <div>{{price}}</div>
-            <br>
+
             {{/each}}
         </div>
         {{/with}}
