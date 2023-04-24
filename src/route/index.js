@@ -8,26 +8,26 @@ const router = express.Router()
 
 var header = {
   name: {
-    firstname: 'Ivan',
-    lastname: 'Ivanov',
+    firstname: 'Anna-Diana',
+    lastname: 'Yovbak',
   },
   position: 'Junior Fullstack JS Developer',
-  salary: '“600$ в місяц',
+  salary: '“1000$ в місяц',
   address: 'Uzhhorod, Ukraine',
 }
 var footer = {
   social: {
     email: {
-      text: 'dmytro@mail.com',
-      href: 'mailto:dmytro@mail.com',
+      text: 'yovbakdiana2016@gmail.com',
+      href: 'yovbakdiana2016@gmail.com',
     },
     phone: {
-      text: '+380670000123',
-      href: 'tel:+380670000123',
+      text: '+380995194400',
+      href: 'tel:+380995194400',
     },
     linkedin: {
       text: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/dmytro-test',
+      href: 'https://www.linkedin.com/in/diana-yovbak-189498263',
     },
   },
 }
@@ -75,7 +75,6 @@ router.get('/skills', function (req, res) {
     page: {
       title: 'Resume | Skills',
     },
-
     header,
 
     main: {
@@ -174,11 +173,9 @@ router.get('/education', function (req, res) {
 router.get('/work', function (req, res) {
   res.render('work', {
     layout: 'big',
-
     page: {
       title: 'Resume | Work',
     },
-
     header,
 
     main: {
@@ -199,7 +196,7 @@ router.get('/work', function (req, res) {
             {
               name: 'Resume',
               url: 'https://web.skillzrun.com/learn/115266',
-              about: 'lalalalala',
+              about: 'different pages',
               stacks: [
                 {
                   name: 'React.js',
@@ -235,7 +232,9 @@ router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
     layout: 'basic',
-
+    page: {
+      title: 'Person',
+    },
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -336,6 +335,9 @@ router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
     layout: 'basic',
+    page: {
+      title: 'Resume | Bio',
+    },
 
     name: 'Albert Einstein',
     birthdate: 'March 14, 1879',
@@ -432,7 +434,9 @@ router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
     layout: 'basic',
-
+    page: {
+      title: 'Program',
+    },
     program: {
       excursion: {
         name: 'Cultural Tour',
@@ -517,6 +521,9 @@ router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
     layout: 'basic',
+    page: {
+      title: 'Resume | Web',
+    },
 
     web: {
       languages: [
@@ -648,6 +655,9 @@ router.get('/js', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('js', {
     layout: 'basic',
+    page: {
+      title: 'Java Script',
+    },
 
     name: 'JavaScript',
     description:
@@ -728,6 +738,9 @@ router.get('/car', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
     layout: 'basic',
+    page: {
+      title: 'Car',
+    },
 
     make: 'Toyota',
     model: 'Camry',
@@ -827,6 +840,9 @@ router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     layout: 'basic',
+    page: {
+      title: 'MacBook',
+    },
 
     name: 'Apple MacBook Pro',
     description: 'The ultimate notebook for power users',
@@ -914,7 +930,9 @@ router.get('/facebook', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('facebook', {
     layout: 'basic',
-
+    page: {
+      title: 'Facebook',
+    },
     name: 'Facebook',
     users: [
       {
@@ -1076,6 +1094,9 @@ router.get('/task21', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
     layout: 'basic',
+    page: {
+      title: 'Task21',
+    },
     heading: {
       main: {
         title: 'JavaScript',
@@ -1144,6 +1165,9 @@ router.get('/task22', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
     layout: 'basic',
+    page: {
+      title: 'Task22',
+    },
     page_header: {
       title: 'InnovaMind',
       description: 'Welcome to our wonderful community',
@@ -1202,6 +1226,9 @@ router.get('/task31', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
     layout: 'basic',
+    page: {
+      title: 'Task31',
+    },
 
     navigation: {
       links: [
@@ -1450,12 +1477,37 @@ router.get('/task31', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+router.get('/list', function (req, res) {
+  res.render('list', {
+    layout: 'basic',
+    page: {
+      title: 'List',
+    },
+    list: [
+      { name: 'First Button' },
+      { name: 'Secondary Button' },
+      { name: 'Error Button' },
+      { name: 'Submit Button' },
+    ],
+    user: {
+      name: 'di',
+      role: 'admin',
+      isConfirm: true,
+      age: 20,
+    },
+  })
+})
+
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     layout: 'shop',
+    page: {
+      title: 'Shophome',
+    },
     navigation: {
       links: [
         {
@@ -1737,29 +1789,15 @@ router.get('/shophome', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-router.get('/list', function (req, res) {
-  res.render('list', {
-    layout: 'basic',
-    list: [
-      { name: 'First Button' },
-      { name: 'Secondary Button' },
-      { name: 'Error Button' },
-      { name: 'Submit Button' },
-    ],
-    user: {
-      name: 'di',
-      role: 'admin',
-      isConfirm: true,
-      age: 20,
-    },
-  })
-})
 router.get('/shopproduct', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopproduct', {
     layout: 'shop',
+    page: {
+      title: 'Shopproduct',
+    },
     navigation: {
       links: [
         {
@@ -1974,6 +2012,9 @@ router.get('/shopnews', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopnews', {
     layout: 'shop',
+    page: {
+      title: 'Shopnews',
+    },
     navigation: {
       links: [
         {
@@ -2182,6 +2223,9 @@ router.get('/shoporder', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shoporder', {
     layout: 'shop',
+    page: {
+      title: 'Shoporder',
+    },
     navigation: {
       links: [
         {
@@ -2551,6 +2595,9 @@ router.get('/shopcart', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcart', {
     layout: 'shop',
+    page: {
+      title: 'Shopcart',
+    },
     navigation: {
       links: [
         {
@@ -2795,6 +2842,9 @@ router.get('/shopprofile', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopprofile', {
     layout: 'shop',
+    page: {
+      title: 'Shopprofile',
+    },
     navigation: {
       links: [
         {
@@ -3087,6 +3137,9 @@ router.get('/shopreview', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
     layout: 'shop',
+    page: {
+      title: 'Shopreview',
+    },
     navigation: {
       links: [
         {
@@ -3371,6 +3424,9 @@ router.get('/shopcatalog', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcatalog', {
     layout: 'shop',
+    page: {
+      title: 'Shopcatalog',
+    },
     navigation: {
       links: [
         {
@@ -3741,6 +3797,17 @@ router.get('/shopcatalog', function (req, res) {
 router.get('/cssStyle', function (req, res) {
   res.render('cssStyle', {
     layout: 'cssStyle',
+    page: {
+      title: 'CssStyle',
+    },
+  })
+})
+router.get('/index', function (req, res) {
+  res.render('index', {
+    layout: 'index',
+    page: {
+      title: 'Pages List',
+    },
   })
 })
 // Підключаємо роутер до бек-енду
