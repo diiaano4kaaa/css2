@@ -1,4 +1,35 @@
-h1 {
-  background: darkblue;
-  color: rgb(81, 149, 97);
+* {
+  color: red;
+}
+html {
+  background: rgb(0, 0, 0);
+}
+
+:root {
+  background: rebeccapurple;
+}
+
+#user {
+  color: rgb(0, 0, 0);
+}
+
+.box {
+  color: aquamarine;
+}
+
+h1,
+h2,
+a {
+  color: blue;
+}
+
+h1.button {
+  color: cyan;
+}
+.name > p {
+  color: darkred;
+}
+
+h1 + h2 {
+  background: black;
 }
