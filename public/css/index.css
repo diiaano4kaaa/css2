@@ -1,6 +1,8 @@
 html {
   max-width: 100%;
 }
+/* 
+cssHomework
 
 :root {
   background: white;
@@ -139,4 +141,93 @@ li::before {
 
 li::after {
   content: '➤';
+} */
+
+/* cssHomework2 */
+button.btn:hover {
+  color: red;
+  background-color: yellow;
+}
+
+h1:hover {
+  background-color: green;
+}
+
+a.link:visited {
+  color: yellow;
+}
+
+div#sidebar {
+  color: red;
+}
+
+button.btn:active {
+  background-color: blue;
+}
+
+button.btn:focus {
+  background-color: orange;
+  color: orange;
+}
+
+#target:target {
+  background-color: green;
+  color: green;
+}
+input[type='checkbox']:checked ~ #target {
+  color: white;
+  background-color: blue;
+}
+
+p:lang(uk) {
+  color: blue;
+}
+
+div.lesson-four-task-ten input:enabled {
+  color: red;
+  background-color: yellow;
+}
+
+input:disabled {
+  background-color: yellow;
+}
+
+input:read-write {
+  background-color: yellow;
+}
+
+input:read-only {
+  background-color: yellow;
+}
+
+input:valid {
+  background-color: green;
+}
+input:invalid {
+  background-color: red;
+}
+
+textarea:optional {
+  background-color: red;
+}
+
+div.lesson-four-task-sixteen input:out-of-range {
+  color: red;
+}
+
+div.lesson-four-task-seventeen input:in-range {
+  color: red;
+}
+
+input:placeholder-shown {
+  background-color: red;
+}
+
+div.lesson-four-task-nineteen :focus-within {
+  color: white;
+  background-color: yellow;
+}
+
+input:invalid {
+  background-color: red;
 }

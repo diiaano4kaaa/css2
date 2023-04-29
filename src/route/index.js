@@ -3827,5 +3827,13 @@ router.get('/cssHomework', function (req, res) {
   })
 })
 
+router.get('/cssHomework2', function (req, res) {
+  res.render('cssHomework2', {
+    layout: 'bootstrap',
+    page: {
+      title: 'css homework2',
+    },
+  })
+})
 // Підключаємо роутер до бек-енду
 module.exports = router
