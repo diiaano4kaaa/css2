@@ -1,4 +1,4 @@
-* {
+/* * {
   color: red;
 }
 html {
@@ -32,4 +32,15 @@ h1.button {
 
 h1 + h2 {
   background: black;
+} */
+
+.card-dark {
+  background-color: darkmagenta;
+}
+.item {
+  color: blue;
+}
+
+.item:last-child {
+  color: rgb(79, 155, 114);
 }

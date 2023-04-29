@@ -3818,5 +3818,14 @@ router.get('/selector1', function (req, res) {
   })
 })
 
+router.get('/cssHomework', function (req, res) {
+  res.render('cssHomework', {
+    layout: 'bootstrap',
+    page: {
+      title: 'css homework',
+    },
+  })
+})
+
 // Підключаємо роутер до бек-енду
 module.exports = router
