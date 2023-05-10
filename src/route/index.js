@@ -3820,7 +3820,7 @@ router.get('/selector1', function (req, res) {
 
 router.get('/cssHomework', function (req, res) {
   res.render('cssHomework', {
-    layout: 'bootstrap',
+    layout: 'cssHomework1',
     page: {
       title: 'css homework',
     },
@@ -3829,9 +3829,18 @@ router.get('/cssHomework', function (req, res) {
 
 router.get('/cssHomework2', function (req, res) {
   res.render('cssHomework2', {
-    layout: 'bootstrap',
+    layout: 'cssHomework2',
     page: {
       title: 'css homework2',
+    },
+  })
+})
+
+router.get('/selector', function (req, res) {
+  res.render('selector', {
+    layout: 'selector',
+    page: {
+      title: 'selector',
     },
   })
 })
