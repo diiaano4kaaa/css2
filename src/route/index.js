@@ -3819,7 +3819,7 @@ router.get('/selector1', function (req, res) {
 })
 
 router.get('/cssHomework', function (req, res) {
-  res.render('cssHomework', {
+  res.render('cssHomework1', {
     layout: 'cssHomework1',
     page: {
       title: 'css homework',
