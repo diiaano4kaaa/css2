@@ -33,7 +33,7 @@ h1.button {
 h1 + h2 {
   background: black;
 } */
-
+/* 
 .card-dark {
   background-color: darkmagenta;
 }
@@ -43,4 +43,9 @@ h1 + h2 {
 
 .item:last-child {
   color: rgb(79, 155, 114);
+} */
+
+* {
+  font-family: 'Alegreya', serif;
+  font-family: 'Montserrat', sans-serif;
 }

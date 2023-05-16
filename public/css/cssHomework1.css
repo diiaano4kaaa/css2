@@ -1,6 +1,10 @@
 html {
   max-width: 100%;
 }
+* {
+  font-family: 'Alegreya', serif;
+  font-family: 'Montserrat', sans-serif;
+}
 
 :root {
   background: white;

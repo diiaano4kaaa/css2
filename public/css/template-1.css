@@ -1,0 +1,151 @@
+/* html {
+  max-width: 100%;
+} */
+
+.page {
+  background: #ffffff;
+  padding: 0 15px;
+}
+
+.page_content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+}
+
+.logo {
+  font-size: 16px;
+}
+
+.devider {
+  margin: 0;
+  height: 1px;
+  background-color: #dee2e6;
+}
+
+.nav {
+  display: block;
+}
+
+.nav_link {
+  color: #343a40;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: rgb(4, 121, 103);
+}
+
+.nav_vertical > .nav_link {
+  display: block;
+}
+
+.nav_inline > .nav_link:not(:last-child) {
+  margin-right: 24px;
+}
+
+.nav_vertical > .nav_link:not(:last-child) {
+  margin-bottom: 12px;
+}
+.header_nav_right {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.page_block:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 24px 0;
+}
+
+.footer_copyrigth {
+  color: #3b648d;
+  font-size: 14px;
+  display: block;
+  margin-top: 12px;
+}
+
+.footer_title {
+  font-size: 20px;
+  color: #212529;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hero_title {
+  text-align: center;
+  color: #212529;
+  font-size: 56px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.hero_text {
+  text-align: center;
+  color: #212529;
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 585px;
+  margin: 0 auto;
+}
+
+.plans:not(:last-of-type) {
+  margin-right: 24px;
+}
+
+.card-header {
+  padding: 12px;
+  text-align: center;
+  font-size: 24px;
+  color: #212529;
+}
+
+.card_body {
+  padding: 24px;
+}
+
+.card_block {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card_block:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+.card_price_amount {
+  color: #212529;
+  font-size: 40px;
+}
+
+.card_price_duration {
+  color: #6c757d;
+  text-align: center;
+  font-size: 29px;
+}
+
+.card_desctiption {
+  text-align: center;
+  display: block;
+}
+.card_desctiption_item {
+  font-size: 16px;
+  color: #212529;
+  display: block;
+}
+.card_desctiption_item:not(:last-of-type) {
+  margin-bottom: 12px;
+}
+.card_button {
+  display: block;
+  width: 100%;
+  font-size: 19px;
+  padding: 9px;
+}
+.card {
+  margin-right: 10px;
+}

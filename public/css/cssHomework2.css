@@ -2,6 +2,11 @@ html {
   max-width: 100%;
 }
 
+* {
+  font-family: 'Alegreya', serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
 button.btn:hover {
   background-color: yellow;
   color: red;
