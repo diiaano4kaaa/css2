@@ -1,0 +1,280 @@
+/* html {
+  max-width: 100%;
+} */
+
+.page {
+  background: #ffffff;
+  padding: 0 15px;
+}
+
+.page_content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.logo {
+  font-size: 16px;
+}
+
+.devider {
+  margin: 0;
+  height: 1px;
+  background-color: #dee2e6;
+}
+
+.nav {
+  display: block;
+}
+
+.nav_link {
+  color: #343a40;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: rgb(4, 121, 103);
+  opacity: 45%;
+}
+
+.nav_vertical > .nav_link {
+  display: block;
+}
+
+.nav_inline > .nav_link:not(:last-child) {
+  margin-right: 24px;
+}
+
+.nav_vertical > .nav_link:not(:last-child) {
+  margin-bottom: 12px;
+}
+.header_nav_right {
+  margin-left: auto;
+  width: fit-content;
+}
+
+.page_block:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.footer {
+  padding: 24px 0;
+
+  border-top: 1px solid #dee2e6;
+}
+
+.footer_copyrigth {
+  color: #3b648d;
+  font-size: 14px;
+  display: block;
+  margin-top: 12px;
+}
+
+.footer_title {
+  font-size: 20px;
+  color: #212529;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hero_title {
+  color: #fff;
+  font-size: 56px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.hero_text {
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 585px;
+}
+
+.hero {
+  background: #343a40;
+  border-radius: 24px;
+  padding: 80px;
+}
+
+.button {
+  text-decoration-line: none;
+  color: white;
+  display: inline-block;
+  max-width: 240px;
+  width: 100%;
+  background: #007bff;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.button:hover {
+  background: #529ff2;
+}
+
+.preview {
+  padding: 24px;
+  border: 1px solid rgb(177, 176, 176);
+  border-radius: 24px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* .preview_header_item:not(:last-of-type) {
+  margin-right: 12px;
+} */
+
+.preview_header > span:not(:last-child) {
+  margin-right: 12px;
+}
+
+.preview_date {
+  font-size: 16px;
+  color: #6c757d;
+}
+
+.preview_category {
+  font-size: 16px;
+}
+
+.preview > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+.preview_title {
+  display: block;
+  font-weight: 500;
+  font-size: 28px;
+  color: #343a40;
+}
+.preview_text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #212529;
+}
+
+.preview_category_1 {
+  color: blue;
+}
+
+.preview_category_3 {
+  color: red;
+}
+.preview_category_2 {
+  color: green;
+}
+
+.preview_category_4 {
+  color: orange;
+}
+
+.list_title {
+  font-weight: 500;
+  font-size: 32px;
+  color: #212529;
+  margin: 0;
+}
+
+.list_header {
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgb(177, 176, 176);
+  margin-bottom: 40px;
+}
+
+.list_categories_button {
+  border: 1px solid #6c757d;
+  border-radius: 32px;
+  font-weight: 400;
+  line-height: 100%;
+  font-size: 16px;
+  color: #6c757d;
+  background-color: #ffffff;
+  padding: 8px 12px;
+}
+
+.list_categories_button:hover {
+  background-color: #9ea6ad;
+}
+
+.list_aside {
+  margin-left: 40px;
+}
+
+.category_list {
+  text-align: right;
+}
+
+.list > *:not(:last-child) {
+  margin-bottom: 40px;
+  padding: 12px;
+}
+.post_title {
+  color: #212529;
+  font-weight: 500;
+  font-size: 27px;
+}
+
+.post_date {
+  color: #999999;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.post_author {
+  color: #0050ff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.post_description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #212529;
+}
+
+.list_aside > *:not(:last-child) {
+  margin-bottom: 40px;
+  padding: 12px;
+}
+
+.about_title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #212529;
+  padding-bottom: 12px;
+}
+.about_text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #212529;
+}
+
+.about {
+  background-color: #f8f9fa;
+  padding: 24px;
+}
+
+.archives {
+  padding: 24px;
+}
+.archives > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+.archives_link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #007bff;
+  display: block;
+}
+.archives_link:hover {
+  color: #4a93e2;
+}

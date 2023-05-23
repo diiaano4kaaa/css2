@@ -13,6 +13,7 @@
 }
 
 .header {
+  border-bottom: 1px solid #dee2e6;
 }
 
 .logo {
@@ -38,6 +39,7 @@
 .nav_link:hover {
   text-decoration: underline;
   color: rgb(4, 121, 103);
+  opacity: 45%;
 }
 
 .nav_vertical > .nav_link {
@@ -62,6 +64,8 @@
 
 .footer {
   padding: 24px 0;
+
+  border-top: 1px solid #dee2e6;
 }
 
 .footer_copyrigth {
@@ -126,6 +130,7 @@
   color: #6c757d;
   text-align: center;
   font-size: 29px;
+  vertical-align: -10%;
 }
 
 .card_desctiption {
@@ -135,7 +140,7 @@
 .card_desctiption_item {
   font-size: 16px;
   color: #212529;
-  display: block;
+  /* display: block; */
 }
 .card_desctiption_item:not(:last-of-type) {
   margin-bottom: 12px;
@@ -148,4 +153,94 @@
 }
 .card {
   margin-right: 10px;
+  border: 1px solid rgb(8, 72, 222);
+  border-bottom-color: #212529;
+  border-radius: 3%;
+  box-shadow: 10px 10px 10px rebeccapurple;
+}
+
+.card:hover {
+  outline: blueviolet;
+  outline-offset: 4px;
+}
+
+.btn:hover {
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rebeccapurple;
+  cursor: grab;
+}
+
+h1 {
+  text-shadow: 10px 10px 10px red;
+}
+
+.plans_card:nth-child(2) {
+  visibility: hidden;
+}
+
+p {
+  word-spacing: 5px;
+  width: 2000px;
+  height: 500px;
+  resize: both;
+  overflow: auto;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    rgba(111, 15, 206, 0.68) 0%,
+    rgba(52, 127, 231, 0.434589) 85.37%,
+    rgba(32, 165, 240, 0.35) 114.79%
+  );
+}
+
+.page {
+  /* background: radial-gradient(
+    ellipse closest-corner at 20% 40%,
+    #f7b42c 0%,
+    #fc575e 90%,
+    #ff9599 100%
+  ); */
+  /* background: conic-gradient(
+    from 0deg at center,
+    white 0%,
+    yellow 25%,
+    red 50%
+  ); */
+  background-image: url('/img/img_1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero_text {
+  background-image: url('/img/img_1.jpg');
+  color: #ffffff;
+  border: 25px solid green;
+  padding: 40px;
+}
+
+.card-block {
+  /* list-style-type: circle; */
+  /* list-style-image: linear-gradient(
+    left bottom right,
+    blue red
+  ); */
+}
+.table {
+  color: rgb(241, 1, 1);
+}
+
+.table tr td {
+  border: 10px solid blueviolet;
+  background-color: #ffffff;
+  border-spacing: 2px 2px;
+  /* empty-cells: hide; */
+}
+
+.nav_link::after,
+.nav_link::before {
+  content: open-quote;
+  display: inline-block;
 }

@@ -12,7 +12,7 @@
                     </div>
                 </nav>
             </header>
-            {{> divider}}
+
         </div>
 
     </div>
@@ -26,17 +26,34 @@
         <main class="row g-0 plans">
             {{#each plans}}
             {{> card_template-1 data=this}}
+
             {{/each}}
         </main>
     </div>
 
+    <div class="page_block">
+        <table class="table">
+            <caption>kdkdkdkd</caption>
+            <tb>
+                {{#each footer}}
+                <tr></tr>
+                {{#each links}}
+                <td>
+                    {{text}}
+                </td>
+                {{/each}}
+                {{/each}}
+                <td></td>
+            </tb>
+        </table>
+    </div>
 
 
 
     <div class="page_block ">
         <div class="page_content">
-            {{> divider}}
-            <footer class="row footer">
+
+            <footer class="row g-0 footer">
                 <div class="col-3">
                     {{> logo}}
                     <span class="footer_copyrigth">Copyright 2023</span>
@@ -50,8 +67,6 @@
             </footer>
         </div>
     </div>
-
-
 
 
 </div>
