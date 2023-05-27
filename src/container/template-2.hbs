@@ -1,11 +1,11 @@
 <div class="page">
     <section class="page_block">
         <div class="page_content">
-            <header class="header row g-0 mb-3">
-                <div class="col-3">
+            <header class="header mb-3">
+                <div class="">
                     {{> logo}}
                 </div>
-                <nav class="header_nav col-9 ">
+                <nav class="header_nav ">
                     <div class="header_nav_right">
                         {{> nav_template-1 list=header }}
                     </div>
@@ -23,9 +23,9 @@
     </section>
 
     <section class="page_block">
-        <div class="row g-3">
+        <div class="flex_container">
             {{#each preview}}
-            <div class="col-6">
+            <div class="flex_item">
                 {{> cardPreview data=this}}
             </div>
             {{/each}}
@@ -35,21 +35,17 @@
 
     <div class="page_block">
         <main class="main">
-            <div class="row g-0">
-                <div class="col-12">
+            <div class="">
+                <div class="">
                     <div class="list_header">
-                        <div class="row g-0">
-                            <div class="col-6">
-                                <h2 class="list_title">List of posts</h2>
-                            </div>
-                            <div class="col-6">
-                                <div class="category_list">
-                                    {{#each categories}}
-                                    <button class="list_categories_button">{{text}}</button>
-                                    {{/each}}
-                                </div>
-                            </div>
+                        <h2 class="list_title">List of posts</h2>
+                        <div class="category_list">
+                            {{#each categories}}
+                            <button class="list_categories_button">{{text}}</button>
+                            {{/each}}
                         </div>
+
+
                     </div>
                 </div>
                 <div class="col-7">
@@ -83,8 +79,8 @@
 
     <section class="page_block ">
         <div class="page_content">
-            <footer class="row g-0 footer">
-                <div class="col-3">
+            <footer class=" footer">
+                <div class="">
                     {{> logo}}
                     <span class="footer_copyrigth">Copyright 2023</span>
                 </div>
