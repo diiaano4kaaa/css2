@@ -110,8 +110,8 @@
 }
 
 .massages {
-  max-width: 620px;
-  width: 100%;
+  /* max-width: 620px;
+  width: 100%; */
 
   background-color: var(--color-white);
   border-radius: var(--border-radius);
@@ -184,7 +184,8 @@
   /* align-items: flex-start; */
 }
 
-.advantages > div {
+.advantages > div,
+.advantage {
   display: flex;
   flex-direction: column;
   border: 1px solid #e4eaf2;
@@ -209,8 +210,8 @@
   color: #767676;
 }
 .form {
-  max-width: 340px;
-  width: 100%;
+  /* max-width: 340px;
+  width: 100%; */
   background-color: var(--color-white);
   border-radius: var(--border-radius);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -306,4 +307,43 @@
   text-align: center;
   color: #212529;
   cursor: pointer;
+}
+
+.advantages {
+  /* display: grid; */
+
+  grid-template-columns: 45%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas: 'massages massages form' 'advantages advantages advantages';
+}
+
+.massages {
+  grid-area: massages;
+}
+
+.form {
+  grid-area: form;
+}
+
+.advantages {
+  grid-area: advantages;
+  grid-template-columns: 50px;
+}
+
+.advantage {
+  height: 100%;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.footer > div:first-of-type {
+  grid-column: 1 / 3;
 }

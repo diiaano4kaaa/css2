@@ -1,21 +1,17 @@
-:root {
-  --space-12: 12px;
-  --space-24: 24px;
-  --space-36: 36px;
+@import '/css/var.css';
 
-  --size-20: 20px;
-  --size-16: 16px;
-
-  --color-border: #dee2e6;
-  --color-logo: #563d7c;
-  --color-white: #ffff;
-  --color-text: #343a40;
-  --color-title: #5a5a5a;
-
-  --border-radius: 12px;
-
-  --weight-title: 500;
+@font-face {
+  font-family: 'SegmentRegular';
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
 }
+
+@font-face {
+  font-family: 'SegmentSemiBold';
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 600;
+}
+@layer normalize, main, component, style;
 
 /* /////////////////////// */
 .page {
@@ -223,4 +219,50 @@
   max-width: 160px;
   color: black;
   text-align: center;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (max-width: 800px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 600px) {
+  .blog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media all and (width <= 560px) {
+  .form {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .form_info {
+    max-width: 70%;
+    width: 100%;
+  }
+  /* .form_content {
+    align-items: center;
+    text-align: center;
+  } */
+}
+
+.hero_container {
+  container-type: inline-size;
+  container-name: hero;
+  /* min-height: 500px; */
+}
+
+@container hero (width < 960px) {
+  .hero {
+    flex-direction: column;
+  }
 }
